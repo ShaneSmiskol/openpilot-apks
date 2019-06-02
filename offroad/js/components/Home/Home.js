@@ -100,10 +100,10 @@ class Home extends Component {
             this.setState({
                 defaultAnimationDialog: true,
             });
+        } else {
+            return null;
         }
-        this.setState({
-            defaultAnimationDialog: true,
-        });
+
 
         return (
           <View style={{ flex: 1 }}>
@@ -303,6 +303,7 @@ class Home extends Component {
                     <View style={ Styles.homeActions }>
                         <View style={ Styles.homeActionsPrimary }>
                             { this.renderDrivePrompt() }
+                            { this.renderTestDialog() }
                         </View>
                         <View style={ Styles.homeActionsSecondary }>
                             <View style={ Styles.homeActionsSecondaryAction }>
@@ -365,7 +366,6 @@ class Home extends Component {
                             </View>
                         </View>
                     </View>
-                { this.renderTestDialog() }
                 </View>
             </X.Gradient>
         )
