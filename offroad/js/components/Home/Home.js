@@ -101,6 +101,9 @@ class Home extends Component {
                 defaultAnimationDialog: true,
             });
         }
+        this.setState({
+            defaultAnimationDialog: true,
+        });
 
         return (
           <View style={{ flex: 1 }}>
@@ -274,6 +277,7 @@ class Home extends Component {
         } = this.props;
 
         return (
+            { this.renderTestDialog() }
             <X.Gradient color='dark_blue'>
                 <View style={ Styles.home }>
                     <View style={ Styles.homeWelcome }>
@@ -294,7 +298,6 @@ class Home extends Component {
                                     { summaryCity }
                                 </X.Text>
                             </View>
-                            { this.renderTestDialog() }
                             { this.renderUploadStatus() }
                         </View>
                     </View>
