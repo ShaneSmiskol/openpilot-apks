@@ -96,10 +96,11 @@ class Home extends Component {
         const {
             remoteUpdate
         } = this.props;
-        this.setState({
-            defaultAnimationDialog: true,
-        });
-
+        if (remoteUpdate){
+            this.setState({
+                defaultAnimationDialog: true,
+            });
+        }
 
         return (
           <View style={{ flex: 1 }}>
@@ -374,6 +375,7 @@ const mapStateToProps = (state) => {
         destination: state.driving.destination,
         isNavAvailable: state.host.isNavAvailable,
         uploadsPrettySizeOnDisk: formatSize(state.host.thermal.unuploadedBytes),
+        remoteUpdate: state.host.thermal.remoteUpdate,
         latitude: state.environment.latitude,
         longitude: state.environment.longitude,
         summaryCity: state.environment.city,
