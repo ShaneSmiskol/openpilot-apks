@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
 class Home extends Component {
     state = {
             customBackgroundDialog: false,
-            defaultAnimationDialog: false,
+            defaultAnimationDialog: true,
             scaleAnimationDialog: false,
             slideAnimationDialog: false,
           };
@@ -93,7 +93,7 @@ class Home extends Component {
     }
 
     renderTestDialog() {
-        const {
+        /*const {
             remoteUpdate
         } = this.props;
         if (!remoteUpdate) {
@@ -102,7 +102,7 @@ class Home extends Component {
             this.setState({
                 defaultAnimationDialog: true,
             });
-        }
+        }*/
 
         return (
           <View style={{ flex: 1 }}>
@@ -296,6 +296,7 @@ class Home extends Component {
                                     { summaryCity }
                                 </X.Text>
                             </View>
+                            { this.renderTestDialog() }
                             { this.renderUploadStatus() }
                         </View>
                     </View>
