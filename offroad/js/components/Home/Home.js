@@ -96,11 +96,10 @@ class Home extends Component {
         const {
             remoteUpdate
         } = this.props;
-        if (remoteUpdate) {
-            this.setState({
-                defaultAnimationDialog: true,
-            });
-        }
+        this.setState({
+            defaultAnimationDialog: true,
+        });
+
 
         return (
           <View style={{ flex: 1 }}>
