@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
 class Home extends Component {
     state = {
             customBackgroundDialog: false,
-            defaultAnimationDialog: true,
+            defaultAnimationDialog: false,
             scaleAnimationDialog: false,
             slideAnimationDialog: false,
           };
@@ -93,16 +93,14 @@ class Home extends Component {
     }
 
     renderTestDialog() {
-        /*const {
+        const {
             remoteUpdate
         } = this.props;
-        if (!remoteUpdate) {
-            return null;
-        } else {
+        if (remoteUpdate) {
             this.setState({
                 defaultAnimationDialog: true,
             });
-        }*/
+        }
 
         return (
           <View style={{ flex: 1 }}>
