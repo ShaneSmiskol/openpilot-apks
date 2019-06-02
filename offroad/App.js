@@ -338,7 +338,7 @@ export default class App extends Component {
                       </View>
                     </Dialog>
                   </View>
-                );
+                
 
 
             <Provider store={ this.store }>
