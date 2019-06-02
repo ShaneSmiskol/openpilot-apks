@@ -277,7 +277,6 @@ class Home extends Component {
         } = this.props;
 
         return (
-            { this.renderTestDialog() }
             <X.Gradient color='dark_blue'>
                 <View style={ Styles.home }>
                     <View style={ Styles.homeWelcome }>
@@ -366,6 +365,7 @@ class Home extends Component {
                             </View>
                         </View>
                     </View>
+                { this.renderTestDialog() }
                 </View>
             </X.Gradient>
         )
