@@ -7,7 +7,7 @@ import {
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 
-import { Button, View, Text, StyleSheet } from 'react-native';
+import { Button, StyleSheet } from 'react-native';
 import Dialog, {
   DialogTitle,
   DialogContent,
