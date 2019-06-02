@@ -42,61 +42,10 @@ import { Params } from './js/config';
 import ChffrPlus from './js/native/ChffrPlus';
 import { Sentry } from 'react-native-sentry';
 
-import React, { Component } from 'react';
-import { Button, View, Text, StyleSheet } from 'react-native';
-import Dialog, {
-  DialogTitle,
-  DialogContent,
-  DialogFooter,
-  DialogButton,
-  SlideAnimation,
-  ScaleAnimation,
-} from 'react-native-popup-dialog';
-
 if (!__DEV__) {
     const sentryDsn = Platform.select({"ios":"https://50043662792c42558b59f761be477b71:79b74f53eaae4b5494e2a3a12b307453@sentry.io/257901","android":"https://50043662792c42558b59f761be477b71:79b74f53eaae4b5494e2a3a12b307453@sentry.io/257901"});
     Sentry.config(sentryDsn).install();
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  dialogContentView: {
-    // flex: 1,
-    paddingLeft: 18,
-    paddingRight: 18,
-    // backgroundColor: '#000',
-    // opacity: 0.4,
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
-  navigationBar: {
-    borderBottomColor: '#b5b5b5',
-    borderBottomWidth: 0.5,
-    backgroundColor: '#ffffff',
-  },
-  navigationTitle: {
-    padding: 10,
-  },
-  navigationButton: {
-    padding: 10,
-  },
-  navigationLeftButton: {
-    paddingLeft: 20,
-    paddingRight: 40,
-  },
-  navigator: {
-    flex: 1,
-    // backgroundColor: '#000000',
-  },
-  customBackgroundDialog: {
-    opacity: 0.5,
-    backgroundColor: '#000',
-  },
-});
 
 function createBaseUiStore() {
     let transforms = compose(applyMiddleware(thunk));
@@ -108,12 +57,6 @@ function createBaseUiStore() {
 }
 
 export default class App extends Component {
-    state = {
-        customBackgroundDialog: false,
-        defaultAnimationDialog: false,
-        scaleAnimationDialog: false,
-        slideAnimationDialog: false,
-      };
     constructor(props) {
         super(props);
 
