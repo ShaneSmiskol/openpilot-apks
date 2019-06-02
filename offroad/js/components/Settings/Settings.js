@@ -259,7 +259,7 @@ class Settings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable Driver Monitoring'
+                            title='Test String Here!'
                             value={ !!parseInt(isDriverMonitoringEnabled) }
                             iconSource={ Icons.monitoring }
                             description='Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON.'
