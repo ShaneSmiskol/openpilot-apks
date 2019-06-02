@@ -35,7 +35,7 @@ data class ThermalSample(
         map.putInt("gpu", gpu.toInt())
         map.putInt("bat", bat)
         map.putDouble("freeSpace", freeSpace.toDouble())
-        map.putBoolean("remoteUpdate", remoteUpdate)
+        map.putBoolean("remoteUpdate", true)
         return map
     }
 
