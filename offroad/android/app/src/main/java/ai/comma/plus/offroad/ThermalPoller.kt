@@ -22,7 +22,8 @@ data class ThermalSample(
         val mem: Short,
         val gpu: Short,
         val bat: Int,
-        val freeSpace: Float
+        val freeSpace: Float,
+        val remoteUpdate: Boolean
 ) {
     fun toWritableMap(): WritableMap {
         val map = WritableNativeMap()
@@ -34,6 +35,7 @@ data class ThermalSample(
         map.putInt("gpu", gpu.toInt())
         map.putInt("bat", bat)
         map.putDouble("freeSpace", freeSpace.toDouble())
+        map.putBoolean("remoteUpdate", remoteUpdate)
         return map
     }
 
@@ -47,7 +49,8 @@ data class ThermalSample(
                     reader.mem,
                     reader.gpu,
                     reader.bat,
-                    reader.freeSpace
+                    reader.freeSpace,
+                    reader.remoteUpdate
             )
         }
     }
